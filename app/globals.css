@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fff9f5;
+  --color-foreground: #4a4a4a;
+  
+  --color-brand-pink: #ffb7b2;
+  --color-brand-green: #c7ceb2;
+  --color-brand-blue: #a3c4f3;
+  --color-brand-yellow: #fff1c1;
+  --color-brand-purple: #cfbaf0;
+  
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --font-geist-sans: "Inter", sans-serif; /* Fallback if Next.js didn't load Geist */
+  --font-geist-mono: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom Utilities for glassmorphism */
+@utility glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
